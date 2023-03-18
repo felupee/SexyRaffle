@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "eslint": "^3.16.1",
-    "eslint-config-trybe-fundamentals": "^1.1.1"
+    "eslint-config-trybe-fundamentals": "^1.1.1",
+    "eslint-plugin-react": "^7.32.2"
   },
   "scripts": {
     "start": "react-scripts start",

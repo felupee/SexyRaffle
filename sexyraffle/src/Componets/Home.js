@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import './Home.css';
+import ChallengeContext from '../Context/ChallengeContext';
 
 function Home() {
   const stage1 = [
@@ -9,6 +10,7 @@ function Home() {
   const stage2 = ['desafio1', 'desafio2', 'desafio3', 'desafio4', 'desafio5', 'desafio5'];
   const stage3 = ['prenda1','prenda2', 'prenda3', 'prenda4', 'prenda5', 'prenda6'];
   const [challenge, setChallenge] = useState(stage1);
+  const { users } = useContext(ChallengeContext)
 
   const [randomNumber, setRandomNumber] = useState();
   const [round, setStage] = useState(1)
@@ -30,7 +32,7 @@ function Home() {
     setRandomNumber(number)
     selectStage();
     setStage(prevState => prevState + 1)
-    console.log(round);
+    console.log(users);
   };
 
 
@@ -44,9 +46,16 @@ function Home() {
 
   return (
     <div>
-      <h1>{challenge[randomNumber]}</h1>
-      <button onClick={raffleNumber}>Sortear Desafio</button>
+      <div>
+        <h1>{challenge[randomNumber]}</h1>
+        <button onClick={raffleNumber}>Sortear Desafio</button>
+      </div>
+      <div>
+        <h1>Jogador 1: </h1>
+      </div>
     </div>
+
+
   );
 }
 

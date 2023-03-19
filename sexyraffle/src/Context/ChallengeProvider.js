@@ -4,7 +4,7 @@ import ChallengeContext from './ChallengeContext';
 function ChallengeProvider({ children }) {
   const [users, setUsers] = useState([]);
   const saveUsers = (usuario) => {
-    setUsers([prevState => ...prevState, usuario]);
+    setUsers(prevState => [...prevState, usuario]);
   }
 
   return (

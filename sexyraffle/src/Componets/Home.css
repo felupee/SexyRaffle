@@ -1,31 +1,55 @@
-body {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  h1 {
-    color: #ff69b4;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  button {
-    background-color: #87ceeb;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #4169e1;
-  }
-  
+.div-main {
+  background-color: #e2d6dd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+.div-jogador1,
+.div-jogador2,
+.div-desafio {
+  background-color: rgb(226, 220, 226);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 30%;
+  max-width: 300px;
+}
+
+.div-doses {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-doses p {
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.div-doses button {
+  background-color: #FEB7E1;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.button-sort {
+  background-color: #FEB7E1;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+}

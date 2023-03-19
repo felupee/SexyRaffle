@@ -14,6 +14,8 @@ function Home() {
 
   const [randomNumber, setRandomNumber] = useState();
   const [round, setStage] = useState(1)
+  const [dosePlayer1, setDosePlayer1] = useState(0);
+  const [dosePlayer2, setDosePlayer2] = useState(0);
 
   const selectStage = () => {
     if (round <= 20) {
@@ -45,13 +47,26 @@ function Home() {
   // };
 
   return (
-    <div>
-      <div>
-        <h1>{challenge[randomNumber]}</h1>
-        <button onClick={raffleNumber}>Sortear Desafio</button>
+    <div className='div-main'>
+      <div className='div-jogador1'>
+        <h1>{users[0]}</h1>
+        <div className='div-doses'>
+          <p>Doses: {dosePlayer1}</p>
+          <button onClick={() => setDosePlayer1(prevState => prevState + 1)}>+</button>
+        </div>
       </div>
-      <div>
-        <h1>Jogador 1: </h1>
+
+      <div className='div-desafio'>
+        <h1>{challenge[randomNumber]}</h1>
+        <button className='button-sort' onClick={raffleNumber}>Sortear Desafio</button>
+      </div>
+
+      <div className='div-jogador2'>
+        <h1>{users[1]}</h1>
+        <div className='div-doses'>
+          <p>Doses: {dosePlayer2}</p>
+          <button onClick={() => setDosePlayer2(prevState => prevState + 1)}>+</button>
+        </div>
       </div>
     </div>
 
